@@ -1,0 +1,1551 @@
+{
+	"info": {
+		"_postman_id": "cb5cb387-27a0-46b0-b1af-911cb0a83993",
+		"name": "sushifire",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "登陆注册",
+			"description": "",
+			"item": [
+				{
+					"name": "localhost:8090/login/forgetPwd",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\":\"yang.lootop@gmail.com\",\"password\":\"@Jinghui111\",\"code\":\"6711\"}"
+						},
+						"url": "localhost:8090/login/forgetPwd"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8090/login/register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\":\"yang.lootop@gmail.com\",\"password\":\"jinghui@111\",\"code\":\"1019\"}"
+						},
+						"url": "localhost:8090/login/register"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8090/login/checkLogin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\":\"lootop.com@gmail.com\",\"password\":\"jinghui@111\",\"code\":\"1019\"}"
+						},
+						"url": "localhost:8090/login/checkLogin"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8090/login/checkEmail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "yang.lootop@gmail.com",
+									"description": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "lootop.com@gmail.com",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": "localhost:8090/login/checkEmail"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8090/login/code",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\":\"lootop.com@gmail.com\",\"password\":\"jinghui@111\",\"code\":\"1008\"}"
+						},
+						"url": "localhost:8090/login/code"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "用户",
+			"description": "",
+			"item": [
+				{
+					"name": "地址管理",
+					"description": "",
+					"item": [
+						{
+							"name": "localhost:8090/api/address/add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"detailAddress\": \"string\",\n  \"id\": 0,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": "localhost:8090/api/address/add"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/address/update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": "localhost:8090/api/address/update"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/address/list",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwNDc1MDAsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.VoInSo88jK_R1_SwV4PFwSOZuToANRDo0NSdrAoJBmYi9RwFjpFjZcSanmVXXFvZ-NPaLKgIUIPIOhYFMr8fTA"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": {
+									"raw": "localhost:8090/api/address/list?userId=8",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"address",
+										"list"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": "8"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/address/updateMain",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwNDc1MDAsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.VoInSo88jK_R1_SwV4PFwSOZuToANRDo0NSdrAoJBmYi9RwFjpFjZcSanmVXXFvZ-NPaLKgIUIPIOhYFMr8fTA"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": {
+									"raw": "localhost:8090/api/address/updateMain?addressId=2",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"address",
+										"updateMain"
+									],
+									"query": [
+										{
+											"key": "addressId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/address/update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwNDc1MDAsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.VoInSo88jK_R1_SwV4PFwSOZuToANRDo0NSdrAoJBmYi9RwFjpFjZcSanmVXXFvZ-NPaLKgIUIPIOhYFMr8fTA"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": {
+									"raw": "localhost:8090/api/address/update?address=5&?userId=8",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"address",
+										"update"
+									],
+									"query": [
+										{
+											"key": "address",
+											"value": "5"
+										},
+										{
+											"key": "?userId",
+											"value": "8"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/address/delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "localhost:8090/api/address/delete?addressId=4",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"address",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "addressId",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/address/default",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwNDc1MDAsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.VoInSo88jK_R1_SwV4PFwSOZuToANRDo0NSdrAoJBmYi9RwFjpFjZcSanmVXXFvZ-NPaLKgIUIPIOhYFMr8fTA"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": {
+									"raw": "localhost:8090/api/address/default?addressId=5",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"address",
+										"default"
+									],
+									"query": [
+										{
+											"key": "addressId",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "购物车管理",
+					"description": "",
+					"item": [
+						{
+							"name": "localhost:8090/api/cart/add",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzExMzEyMTIsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.wvxF2fRY1APmRE-htHij_06QHpiCF3udGuTENLPNX3tFgQ37h3m5LbqwRO8NaDAic2jvPXCsx0RQCCkn-iZeCg"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": {
+									"raw": "localhost:8090/api/cart/add?foodsDetailId=1&count=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"cart",
+										"add"
+									],
+									"query": [
+										{
+											"key": "foodsDetailId",
+											"value": "1"
+										},
+										{
+											"key": "count",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/cart/list",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzExMzEyMTIsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.wvxF2fRY1APmRE-htHij_06QHpiCF3udGuTENLPNX3tFgQ37h3m5LbqwRO8NaDAic2jvPXCsx0RQCCkn-iZeCg"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": "localhost:8090/api/cart/list"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/cart/delete",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzExMzEyMTIsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.wvxF2fRY1APmRE-htHij_06QHpiCF3udGuTENLPNX3tFgQ37h3m5LbqwRO8NaDAic2jvPXCsx0RQCCkn-iZeCg"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": {
+									"raw": "localhost:8090/api/cart/delete?foodsDetailId=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"cart",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "foodsDetailId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "订单管理",
+					"description": "",
+					"item": [
+						{
+							"name": "localhost:8090/api/order/insert",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"addressId\": 0,\n  \"delFlag\": \"0\",\n\n  \"orderDetailList\": [\n    {\n      \"delFlag\": \"0\",\n      \"foodsId\": 0,\n      \"numOf\": 0,\n      \"orderId\": 0,\n      \"purchasePrice\": 0,\n      \"remark\": \"string\",\n      \"updateBy\": 0\n     \n    }\n  ],\n  \"orderNo\": \"string\",\n  \"remark\": \"string\",\n  \"totalPrice\": 0\n}"
+								},
+								"url": "localhost:8090/api/order/insert"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/order/list",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": {
+									"raw": "localhost:8090/api/order/list?page=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"order",
+										"list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/order/id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": "localhost:8090/api/order/1"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/order/update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzExMjM5ODMsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.O3DqXVUpKcJrUNdJDqOceIDgxEN8Uq73Ri3lph-OkHd3my5GPv0_BsDxl_Sj_LMUejj7uEOzMRBzBhVmThdCFw"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"addressId\": 0,\n  \"id\":4,\n  \"orderDetailList\": [\n    {\n      \"foodsId\": 0,\n      \"id\": 0,\n      \"numOf\": 0,\n      \"orderId\": 0,\n      \"purchasePrice\": 0,\n      \"remark\": \"string\"\n    }\n  ],\n  \"orderNo\": \"string\",\n  \"remark\": \"string\",\n  \"totalPrice\": 0\n}"
+								},
+								"url": "localhost:8090/api/order/update"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/order/id",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzExMzEyMTIsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.wvxF2fRY1APmRE-htHij_06QHpiCF3udGuTENLPNX3tFgQ37h3m5LbqwRO8NaDAic2jvPXCsx0RQCCkn-iZeCg"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": "localhost:8090/api/order/5"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "订单详情",
+					"description": "",
+					"item": [
+						{
+							"name": "localhost:8090/api/orderDetail/insert",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzExMzEyMTIsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.wvxF2fRY1APmRE-htHij_06QHpiCF3udGuTENLPNX3tFgQ37h3m5LbqwRO8NaDAic2jvPXCsx0RQCCkn-iZeCg"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": "localhost:8090/api/orderDetail/insert"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/orderDetail/list",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzExMzEyMTIsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.wvxF2fRY1APmRE-htHij_06QHpiCF3udGuTENLPNX3tFgQ37h3m5LbqwRO8NaDAic2jvPXCsx0RQCCkn-iZeCg"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": {
+									"raw": "localhost:8090/api/orderDetail/list?page=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"orderDetail",
+										"list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/orderDetail/id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzExMzEyMTIsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.wvxF2fRY1APmRE-htHij_06QHpiCF3udGuTENLPNX3tFgQ37h3m5LbqwRO8NaDAic2jvPXCsx0RQCCkn-iZeCg"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": "localhost:8090/api/orderDetail/1"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/orderDetail/update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzExMzEyMTIsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.wvxF2fRY1APmRE-htHij_06QHpiCF3udGuTENLPNX3tFgQ37h3m5LbqwRO8NaDAic2jvPXCsx0RQCCkn-iZeCg"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"foodsId\": 0,\n  \"id\": 7,\n  \"numOf\": 0,\n  \"orderId\": 0,\n  \"purchasePrice\": 0,\n  \"remark\": \"string\"\n}"
+								},
+								"url": "localhost:8090/api/orderDetail/update"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/orderDetail/id",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": "localhost:8090/api/orderDetail/id"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "商户",
+			"description": "",
+			"item": [
+				{
+					"name": "公司管理",
+					"description": "",
+					"item": [
+						{
+							"name": "localhost:8090/api/company/insert",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"addressEntripise\": \"string\",\n  \"delFlag\": \"string\",\n  \"entripiseIntroduce\": \"string\",\n  \"id\": 0,\n  \"nameEntripise\": \"string\",\n  \"pmTimeEnd\": \"2018-07-07T13:33:35.088Z\",\n  \"pmTimeStart\": \"2018-07-07T13:33:35.088Z\",\n  \"remark\": \"string\",\n  \"restTime\": \"string\",\n  \"takeOutArea\": \"string\",\n  \"telEntripise\": \"string\"\n}"
+								},
+								"url": "localhost:8090/api/company/insert"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/company/id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": "localhost:8090/api/company/3"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/company/list",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": {
+									"raw": "localhost:8090/api/company/list?page=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"company",
+										"list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/company/update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"addressEntripise\": \"string\",\n  \"delFlag\": \"0\",\n  \"entripiseIntroduce\": \"string\",\n  \"id\": 1,\n  \"nameEntripise\": \"string\",\n  \"remark\": \"string\",\n  \"restTime\": \"string\",\n  \"takeOutArea\": \"string\",\n  \"telEntripise\": \"string\"\n}"
+								},
+								"url": "localhost:8090/api/company/update"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/company/id",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": "localhost:8090/api/company/3"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "轮播图管理",
+					"description": "",
+					"item": [
+						{
+							"name": "localhost:8090/api/banner/insert",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwNDc1MDAsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.VoInSo88jK_R1_SwV4PFwSOZuToANRDo0NSdrAoJBmYi9RwFjpFjZcSanmVXXFvZ-NPaLKgIUIPIOhYFMr8fTA"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"carouselImg\": \"string\",\n  \"delFlag\": \"string\",\n  \"dsc\": \"string\",\n  \"name\": \"string\",\n  \"remark\": \"string\"\n}"
+								},
+								"url": "localhost:8090/api/banner/insert"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/banner/list",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwNDc1MDAsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.VoInSo88jK_R1_SwV4PFwSOZuToANRDo0NSdrAoJBmYi9RwFjpFjZcSanmVXXFvZ-NPaLKgIUIPIOhYFMr8fTA"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"carouselImg\": \"string\",\n  \"createBy\": 0,\n  \"delFlag\": \"string\",\n  \"dsc\": \"string\",\n  \"id\": 0,\n  \"name\": \"string\",\n  \"remark\": \"string\",\n  \"updateBy\": 0,\n}"
+								},
+								"url": {
+									"raw": "localhost:8090/api/banner/list?page=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"banner",
+										"list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/banner/update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"carouselImg\": \"string\",\n  \"delFlag\": \"0\",\n  \"dsc\": \"string\",\n  \"name\": \"string\",\n  \"remark\": \"string\",\n  \"id\": 2\n}"
+								},
+								"url": "localhost:8090/api/banner/update"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/banner/id",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwNDc1MDAsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.VoInSo88jK_R1_SwV4PFwSOZuToANRDo0NSdrAoJBmYi9RwFjpFjZcSanmVXXFvZ-NPaLKgIUIPIOhYFMr8fTA"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"carouselImg\": \"string\",\n  \"createBy\": 0,\n  \"delFlag\": \"string\",\n  \"dsc\": \"string\",\n  \"id\": 0,\n  \"name\": \"string\",\n  \"remark\": \"string\",\n  \"updateBy\": 0,\n}"
+								},
+								"url": "localhost:8090/api/banner/1"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/banner/id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwNDc1MDAsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.VoInSo88jK_R1_SwV4PFwSOZuToANRDo0NSdrAoJBmYi9RwFjpFjZcSanmVXXFvZ-NPaLKgIUIPIOhYFMr8fTA"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"carouselImg\": \"string\",\n  \"createBy\": 0,\n  \"delFlag\": \"string\",\n  \"dsc\": \"string\",\n  \"id\": 0,\n  \"name\": \"string\",\n  \"remark\": \"string\",\n  \"updateBy\": 0,\n}"
+								},
+								"url": "localhost:8090/api/banner/2"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "图片上传",
+					"description": "",
+					"item": [
+						{
+							"name": "localhost:8090/api/file/upload",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MjcwODQ1MDEsImxvZ2luTmFtZSI6Imxvb3RvcC5jb21AZ21haWwuY29tIn0.oSGEq4b0y4NfYOBBfip2Uv8cjao0v2p3wzYHQtMToJbLLO5aOrGw4MpAPlWsHo14FQQXmsISk6Seoa6UCveOXw"
+									},
+									{
+										"key": "",
+										"value": ""
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"description": "",
+											"type": "file"
+										}
+									]
+								},
+								"url": "localhost:8090/api/file/upload"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "商品管理",
+					"description": "",
+					"item": [
+						{
+							"name": "localhost:8090/api/foods/insert",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"content\": \"string\",\n  \"delFlag\": \"string\",\n  \"foodsImg\": \"string\",\n  \"foodsName\": \"string\",\n  \"id\": 0,\n  \"price\": \"string\",\n  \"remark\": \"string\",\n  \"typeid\": 0\n}"
+								},
+								"url": "localhost:8090/api/foods/insert"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/foods/list",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": {
+									"raw": "localhost:8090/api/foods/list?page=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"foods",
+										"list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/foods/id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": "localhost:8090/api/foods/1"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/foods/id",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": "localhost:8090/api/foods/2"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/foods/update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"content\": \"string\",\n  \"delFlag\": \"1\",\n  \"foodsImg\": \"string\",\n  \"foodsName\": \"string\",\n  \"id\": 1,\n  \"price\": \"string\",\n  \"remark\": \"string\",\n  \"typeid\": 0\n \n}"
+								},
+								"url": {
+									"raw": "localhost:8090/api/foods/update?foods=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"foods",
+										"update"
+									],
+									"query": [
+										{
+											"key": "foods",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "商品类型管理",
+					"description": "",
+					"item": [
+						{
+							"name": "localhost:8090/api/foodsType/insert",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"children\": [\n    {}\n  ],\t\n  \"delFlag\": \"string\",\n  \"id\": 0,\n  \"parentId\": 0,\n  \"remark\": \"string\",\n  \"sort\": 0,\n  \"typeName\": \"string\"\n}"
+								},
+								"url": "localhost:8090/api/foodsType/insert"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/foodsType/list",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": {
+									"raw": "localhost:8090/api/foodsType/list?page=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"foodsType",
+										"list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/foodsType/id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": "localhost:8090/api/foodsType/1"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/foodsType/update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"children\": [\n    {}\n  ],\n  \"delFlag\": \"string\",\n  \"id\": 1,\n  \"parentId\": 0,\n  \"remark\": \"string\",\n  \"sort\": 0,\n  \"typeName\": \"string\",\n  \"updateBy\": 0\n}"
+								},
+								"url": "localhost:8090/api/foodsType/update"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/foodsType/id",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"string\",\n  \"consignee\": \"string\",\n  \"defaultFlag\": 0,\n  \"delFlag\": 0,\n  \"detailAddress\": \"string\",\n  \"id\": 1,\n  \"phoneNumber\": \"string\",\n  \"postcode\": \"string\",\n  \"userId\": 0\n}"
+								},
+								"url": "localhost:8090/api/foodsType/2"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/foodsType/tree",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzEwMzcwOTgsImxvZ2luTmFtZSI6InlhbmcubG9vdG9wQGdtYWlsLmNvbSJ9.cBkAFN1S5-95NxfHIJ-hcjhPJfnS_oxoxjQdSkS6lRNxqXTDuKQC9rBWP1zQnGwpO-TCrhGIvf8PXEg9omTP0A"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"children\": [\n    {}\n  ],\n  \"delFlag\": \"string\",\n  \"id\": 1,\n  \"parentId\": 0,\n  \"remark\": \"string\",\n  \"sort\": 0,\n  \"typeName\": \"string\",\n  \"updateBy\": 0\n}"
+								},
+								"url": "localhost:8090/api/foodsType/tree"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "公司时间管理",
+					"description": "",
+					"item": [
+						{
+							"name": "localhost:8090/api/workTime/insert",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzE2NjE3NDgsImxvZ2luTmFtZSI6Imxvb3RvcC5jb21AZ21haWwuY29tIn0.Hld4y6i81oy4XdyRY19vUOevOtLnW5rC-eM1ismLK1Rdcb7TN1_jsgyAd0CU3m0ifHaKME6-iWKgPpa5fAYFVQ"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"companyId\": 0,\n  \"delFlag\": \"0\",\n  \"id\": 0,\n  \"remark\": \"string\",\n  \"week\": 1\n}"
+								},
+								"url": "localhost:8090/api/workTime/insert"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/workTime/list",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzE2NjE3NDgsImxvZ2luTmFtZSI6Imxvb3RvcC5jb21AZ21haWwuY29tIn0.Hld4y6i81oy4XdyRY19vUOevOtLnW5rC-eM1ismLK1Rdcb7TN1_jsgyAd0CU3m0ifHaKME6-iWKgPpa5fAYFVQ"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"companyId\": 0,\n  \"delFlag\": \"0\",\n  \"id\": 0,\n  \"remark\": \"string\",\n  \"week\": 1\n}"
+								},
+								"url": {
+									"raw": "localhost:8090/api/workTime/list?page=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"workTime",
+										"list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/workTime/update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzE2NjE3NDgsImxvZ2luTmFtZSI6Imxvb3RvcC5jb21AZ21haWwuY29tIn0.Hld4y6i81oy4XdyRY19vUOevOtLnW5rC-eM1ismLK1Rdcb7TN1_jsgyAd0CU3m0ifHaKME6-iWKgPpa5fAYFVQ"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"companyId\": 0,\n  \"delFlag\": \"0\",\n  \"id\": 0,\n  \"remark\": \"string\",\n  \"week\": 1\n}"
+								},
+								"url": "localhost:8090/api/workTime/update"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/workTime/1",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzE2NjE3NDgsImxvZ2luTmFtZSI6Imxvb3RvcC5jb21AZ21haWwuY29tIn0.Hld4y6i81oy4XdyRY19vUOevOtLnW5rC-eM1ismLK1Rdcb7TN1_jsgyAd0CU3m0ifHaKME6-iWKgPpa5fAYFVQ"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"companyId\": 0,\n  \"delFlag\": \"0\",\n  \"remark\": \"string\",\n  \"week\": 3\n}"
+								},
+								"url": "localhost:8090/api/workTime/1"
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:8090/api/workTime/1",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1MzE2NjE3NDgsImxvZ2luTmFtZSI6Imxvb3RvcC5jb21AZ21haWwuY29tIn0.Hld4y6i81oy4XdyRY19vUOevOtLnW5rC-eM1ismLK1Rdcb7TN1_jsgyAd0CU3m0ifHaKME6-iWKgPpa5fAYFVQ"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"companyId\": 0,\n  \"delFlag\": \"0\",\n  \"remark\": \"string\",\n  \"week\": 3\n}"
+								},
+								"url": "localhost:8090/api/workTime/1"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "email管理",
+			"description": "",
+			"item": [
+				{
+					"name": "localhost:8090/email/send",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "yang.lootop@gmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "lootop.com@gmail.com",
+									"description": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": "localhost:8090/email/send"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "dc90e3dd-ada0-4986-bb99-91075c442b22",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "24906ad5-aee2-4328-9dff-4a1dbb560ff6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
