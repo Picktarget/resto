@@ -13,7 +13,7 @@
 							</ul>
 					</li>
 					<li class="menu">
-							<router-link to="/about">
+							<router-link to="/commodity/xs">
 									<span class="title">小食</span>
 							</router-link>
 					</li>
@@ -126,7 +126,8 @@ export default {
         left: -137px;
         text-align: left;
         background-color: #fff;
-        box-shadow: 2px 2px 2px #f8f8f8;
+        -webkit-box-shadow:0 0 2px #f8f8f8;
+        box-shadow: 0 0 2px #f8f8f8;
         border: 1px solid #f8f8f8;
         border-top: 0;
         li {

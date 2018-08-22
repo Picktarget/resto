@@ -1,16 +1,24 @@
 <template>
     <Carousel autoplay v-model="value1" loop>
         <CarouselItem>
-        <div class="demo-carousel">1</div>
+        <div class="demo-carousel">
+          <img src="../assets/1.jpg" alt="" srcset="">
+        </div>
         </CarouselItem>
         <CarouselItem>
-        <div class="demo-carousel">2</div>
+        <div class="demo-carousel">
+           <img src="../assets/2.jpg" alt="" srcset="">
+        </div>
         </CarouselItem>
         <CarouselItem>
-        <div class="demo-carousel">3</div>
+        <div class="demo-carousel">
+           <img src="../assets/3.jpg" alt="" srcset="">
+        </div>
         </CarouselItem>
         <CarouselItem>
-        <div class="demo-carousel">4</div>
+           <div class="demo-carousel">
+            <img src="../assets/2.jpg" alt="" srcset="">
+           </div>
         </CarouselItem>
     </Carousel>  
 </template>
@@ -35,7 +43,7 @@ export default {
   height: 375px;
   line-height: 375px;
   font-size: 14px;
-  color:#fff;
+  color: #fff;
 }
 </style>
 

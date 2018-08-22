@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import iview from 'iview'
 import 'iview/dist/styles/iview.css'
+import './assets/css/theme.css'
 import VueI18n from 'vue-i18n'
 
 Vue.config.productionTip = false
